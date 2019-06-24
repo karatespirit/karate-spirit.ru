@@ -8,7 +8,7 @@
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<link rel="icon" type="image/png" href="images/logo.png" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.6.min.js"></script>
     		<!-- Attach our CSS -->
 	  	<link rel="stylesheet" href="reveal.css">	
 		<script type="text/javascript" src="jquery.reveal.js"></script>
