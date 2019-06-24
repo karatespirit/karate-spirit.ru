@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ШКОЛА КЕКУСИНКАЙ КАРАТЭ</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Melms" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="icon" type="image/png" href="images/logo.png" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+    		<!-- Attach our CSS -->
+	  	<link rel="stylesheet" href="reveal.css">	
+		<script type="text/javascript" src="jquery.reveal.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+            
+            //Центрирование модального окна по горизонтали
+            var wind = $(window).width();
+            var modal = $("#nav").width();
+            var left = (wind - modal)/2;
+            $("#nav").css('left',left+'px');
+            
+            $(function(){
+        	    $('a[href^="#"]').click(function(){
+        			var target = $(this).attr('href');
+        			$('html, body').animate({scrollTop: $(target).offset().top}, 300);
+        			return false;
+        	    }); 
+            });
+            
+            $("#preim1,#preim2,#preim3,#preim4,#preim5,#preim6").mouseover(function() {
+                
+                $(this).animate({
+                    height: "264",
+                    width: "357",
+                    left: "-=20",
+                    top: "-=20"
+                }).css("z-index",10);
+            });
+            
+            $("#preim1,#preim2,#preim3,#preim4,#preim5,#preim6").mouseout(function() {
+                
+                $(this).animate({
+                    height: "224",
+                    width: "317",
+                    left: "+=20",
+                    top: "+=20"
+                });
+            });
+            
+           
+ 
+    });
+            
+    function mailsend(pname, pphone) {
+		var xmlHttp = false;
+		/*@cc_on @*/
+		/*@if (@_jscript_version >= 5)
+		try {
+			xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+		} 
+		catch(e){
+			try {
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch(e2){
+				xmlHttp = false;
+			}
+		}
+		@end @*/
+		if (!xmlHttp && typeof XMLHttpRequest != 'undefined') {
+			xmlHttp = new XMLHttpRequest();
+		}
+		
+		var name = document.getElementById(pname).value;
+		var phone = document.getElementById(pphone).value;
+		var url = "obr_call.php?name="+name+"&phone="+phone;
+		
+		xmlHttp.open("GET", url, true);
+		xmlHttp.onreadystatechange = updatePage;
+		xmlHttp.send(null);
+		
+		function updatePage() {
+			if (xmlHttp.readyState == 4) {
+				if (xmlHttp.status == 200) {
+					var response = xmlHttp.responseText;
+					if (response == "ok") {
+						alert('Мы свяжемся с вами!');
+					}
+				}
+				else if (xmlHttp.status == 404)
+					alert("Страница не найдена");
+				else
+					alert("Ошибка: " + xmlHttp.status);
+			}
+		}
+	}
+            
+        
+    </script>
+</head>
+<body>
+<div id="nav_wrap">
+    <div id="nav">
+        <a href="#preim">Наши преимущества</a>
+        <a href="#review" style="margin-left: 20px;">Отзывы</a>
+        <a href="#price" style="margin-left: 20px;">Расписание и стоимость</a>
+        <a href="#count" style="margin-left: 20px;">Акция</a>
+    </div>
+</div>
+<!-- Код тега ремаркетинга Google -->
+<!--------------------------------------------------
+С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 966376340;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/966376340/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25250084 = new Ya.Metrika({id:25250084,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/25250084" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56425592-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <div id="header_wrap">
+        <div id="header">
+            <div id="h_top">
+                <div id="logo">
+                    <p><img src="images/logo.png" alt="" /></p>
+                    <p>
+                        <span class="logo_txt1">ШКОЛА КЕКУСИНКАЙ КАРАТЭ</span><br />
+                        <span class="logo_txt2">для детей и взрослых в Москве</span>
+                    </p>
+                </div>
+                <p class="clear"></p>
+                <div id="call">
+                    <p class="call_txt">Бесплатный звонок по Москве и области</p>
+                    <p class="call_number">8 (499) 403-15-97</p>
+                    <a href="#h_form2" style="text-decoration: none;"><p class="call_button">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</p></a>
+                </div>
+            </div>
+            <div id="h_bottom">
+                <div>
+                    <p class="h_txt1">КАК ВОСПИТАТЬ СИЛУ ДУХА, ВОЛЮ, ХАРАКТЕР?</p>
+                    <p class="h_txt2">УРОКИ БОЕВОГО ИСКУССТВА КЁКУСИНКАЙ ПОМОГУТ В ЭТОМ!</p>
+                    <p class="h_txt3">ЗАПИШИТЕСЬ НА БЕСПЛАТНЫЙ УРОК!</p>
+                    <form action="#" method="post" id="h_form">
+                        <input class="input" type="text" id="name" placeholder="Введите Ваше имя" />
+                        <img class="input_img1" src="images/input1.png" alt="" />
+                        <input class="input" type="text" id="phone" placeholder="Введите Ваш телефон" style="margin-left: 20px;" />
+                        <img class="input_img2" src="images/input2.png" alt="" />
+                        <input type="button" id="button" value="Оставить заявку" onclick="mailsend('name','phone'); yaCounter25250084.reachGoal('zayavka'); return true;"/>
+                    </form>
+                    <p class="zamok">
+                        <img src="images/zamok.png" alt="" />
+                        <span class="h_txt4">Ваши данные не будут переданы третьим лицам</span>
+                    </p>
+                </div>
+            </div>
+            <p class="karatist1"><img src="images/karatist1.png" alt="" /></p>
+            <p class="karatist2"><img src="images/karatist2.png" alt="" /></p>
+        </div>
+    </div>
+    <div id="opisanie_wrap">
+        <div id="opisanie">
+            <p class="op1">Существуем с<br /><b>1989 года</b></p>
+            <p class="op2"><b>Более</b><br />45000 учеников<br />по всей России</p>
+            <p class="op3"><b>Более</b><br />1500 обладателей<br />черных поясов</p>
+            <p class="op4">Тренеры только<br />черные пояса,<br />с опытом от 7 лет</p>
+        </div>
+        <p class="clear"></p>
+    </div>
+    <div id="itis_wrap">
+        <div id="itis">
+            <p class="itis_txt">ЧТО ТАКОЕ КЁКУСИНКАЙ КАРАТЕ?</p>
+            <div>
+                <p class="itis_img">
+                    <!--<iframe src="http://vk.com/video_ext.php?oid=-59947562&id=168023764&hash=4bcfeeb8398668c8&hd=1" width="482" height="266" frameborder="0"></iframe>-->
+                    <iframe width="482" height="266" src="//www.youtube.com/embed/U1bOVeN2-fc" frameborder="0" allowfullscreen></iframe>
+                    <!--<img src="images/video.png" alt="" />-->
+                </p>
+                <p class="itis_txt2"><span class="begin_txt">Боевое Искусство  Кёкусинкай</span> - это инструмент 
+                человеческого совершенствования, где, проходя 
+                через трудности и испытания, мы обретаем силу 
+                Духа, настоящую Жизнь, а со временем и Самих Себя. 
+                Понять и прочувствовать это можно только в додзё 
+                (зале), набравшись смелости и сделав шаг.</p>
+                <a href="#h_form2" style="text-decoration: none;"><p class="itis_button">Оставить заявку</p></a>
+            </div>
+        </div>
+    </div>
+    <div id="result_wrap">
+        <div id="result">
+            <p class="result_txt">В РЕЗУЛЬТАТЕ РЕГУЛЯРНЫХ ТРЕНИРОВОК У ДЕТЕЙ</p>
+            <div id="results">
+                <div style="margin: 20px 0 0 150px;">
+                    <p><img src="images/res1.png" alt="" /></p>
+                    <p class="res_txt">Развивается<br />дисциплинированность<br />и характер</p>
+                </div>
+                <div style="margin: 20px 0 0 60px;">
+                    <p><img src="images/res2.png" alt="" /></p>
+                    <p class="res_txt">Улучшается память, усидчивость,<br />внимательность к деталям.</p>
+                </div>
+                <div style="margin: 20px 0 0 20px;">
+                    <p><img src="images/res3.png" alt="" /></p>
+                    <p class="res_txt">Улучшается осанка, координация<br />и чувство равновесия</p>
+                </div>
+                <p class="clear"></p>
+                <div style="margin: 20px 0 0 120px;">
+                    <p><img src="images/res4.png" alt="" /></p>
+                    <p class="res_txt">Формируется внутренний<br />стержень и уверенность в себе</p>
+                </div>
+                <div style="margin: 20px 0 0 40px;">
+                    <p><img src="images/res5.png" alt="" /></p>
+                    <p class="res_txt">Возрастает физическая<br />выносливость и<br />психологическая устойчивость</p>
+                </div>
+                <div style="margin: 20px 0 0 80px;">
+                    <p><img src="images/res6.png" alt="" /></p>
+                    <p class="res_txt">Появляется круг<br />настоящих друзей,<br />исчезают проблемы<br />с общением</p>
+                </div>
+            </div>
+            <p class="clear"></p>
+            <a href="#h_form2" style="text-decoration: none;"><p class="result_button">Оставить заявку</p></a>
+        </div>
+    </div>
+    <div id="result2_wrap">
+        <div id="result2">
+            <p class="result2_txt">7 ПРИЧИН ЗАНИМАТЬСЯ КАРАТЕ ВЗРОСЛЫМ</p>
+            <div id="results">
+                <div style="margin: 20px 0 0 0;">
+                    <p><img src="images/result1.png" alt="" /></p>
+                    <p class="res_txt">Научиться  управлять<br />собой, своими эмоциями,<br />телом и разумом</p>
+                </div>
+                <div style="margin: 20px 0 0 50px;">
+                    <p><img src="images/result2.png" alt="" /></p>
+                    <p class="res_txt">Развить умение расслабляться,<br />восстанавливать силы<br />за короткое время</p>
+                </div>
+                <div style="margin: 20px 0 0 70px;">
+                    <p><img src="images/result3.png" alt="" /></p>
+                    <p class="res_txt">Укрепить здоровье на<br />долгие годы, вернуть<br />молодость, гибкость<br />и легкость в теле</p>
+                </div>
+                <div style="margin: 20px 0 0 60px;">
+                    <p><img src="images/result4.png" alt="" /></p>
+                    <p class="res_txt">Улучшить кровообращение,<br />обмен веществ,<br />подвижность суставов,<br />гибкость позвоночника,<br />укрепить связки и сухожилия</p>
+                </div>
+                <p class="clear"></p>
+                <div style="margin: 20px 0 0 130px;">
+                    <p><img src="images/result5.png" alt="" /></p>
+                    <p class="res_txt">Пробудить  силу Духа,<br />активизировать<br />жизненную энергию,<br />развить уверенность в себе</p>
+                </div>
+                <div style="margin: 20px 0 0 40px;">
+                    <p><img src="images/result6.png" alt="" /></p>
+                    <p class="res_txt">Выработать навык концентрации<br />сознания, который способствует<br />внутренней собранности<br />и организованности</p>
+                </div>
+                <div style="margin: 20px 0 0 0;">
+                    <p><img src="images/result7.png" alt="" /></p>
+                    <p class="res_txt">Освободиться от внутренних<br />и внешних зажимов,<br />напряжения, стресса, гнева,<br />обид, улучшить настроение<br />и отношения с окружающими людьми</p>
+                </div>
+            </div>
+            <p class="clear"></p>
+            <a href="#h_form2"; style="text-decoration: none;"><p class="result2_button">Оставить заявку</p></a>
+        </div>
+    </div>
+    <div id="preim_wrap">
+        <div id="preim">
+            <p class="preim_txt">ПОЧЕМУ СТОИТ ЗАПИСАТЬСЯ ИМЕННО К НАМ</p>
+            <div id="preims">
+                <div id="preim1">
+                    <p>Наша Школа  состоит в Российском<br /> 
+                    Союзе Каратэ Кекусин Кайкан, которая,<br /> 
+                    в свою очередь, входит в состав<br />
+                    Международной Организации Каратэ<br />
+                    Кекусинкай (IKO) с центром в Японии</p>
+                    <div class="pr1"></div>
+                </div>
+                <div id="preim2">
+                    <p>Преподаватели прямые ученики Сихана<br />
+                    Якунина С.И., Президента Российского<br />
+                    Союза Каратэ, единственного<br />
+                    обладателя 8 дана среди европейцев,<br />
+                    который признан среди мастеров в<br />
+                    Японии как равный</p>
+                    <div class="pr1"></div>
+                </div>
+                <div id="preim3">
+                    <p>Целостный подход в обучении, в основе<br />
+                    которой сам человек и его<br />
+                    совершенствование, а спорт выступает<br />
+                    не как основная цель, а  как важная<br />
+                    ступень развития.</p>
+                    <div class="pr1"></div>
+                </div>
+                <div id="preim4">
+                    <p>Сплоченный круг друзей всегда готовых<br />
+                    протянуть руку и поддержать. Общение<br />
+                    не только в зале, но и за ее пределами.</p>
+                    <div class="pr1"></div>
+                </div>
+                <div id="preim5">
+                    <p>2 раза в год квалификационные<br />
+                    экзамены с выдачей сертификатов<br />
+                    международного образца</p>
+                    <div class="pr1"></div>
+                </div>
+                <div id="preim6">
+                    <p>Ежегодно проходят семинары по России<br />
+                    и за рубежом с признанными мастерами<br />
+                    боевых искусств, спортивные лагеря, а<br />
+                    также соревнования различного уровня</p>
+                    <div class="pr1"></div>
+                </div>
+            </div>
+            <p class="clear"></p>
+        </div>
+    </div>
+    <div id="review_wrap">
+        <div id="review">
+            <p class="review_txt">ОТЗЫВЫ</p>
+            <div id="reviews">
+               <a href="#" data-reveal-id="myModal">
+                <div id="revmini1">
+                    <p><img src="images/sveta.png" alt="" /></p>
+                    <p class="rev_fio">Наталья</p>
+                    <p class="rev_txt">В возрасте 46 лет я пришла заниматься каратэ.
+                    Это было и чудом и авантюрой одновременно...</p>
+                </div>	</a>	
+                		<div id="myModal" class="reveal-modal">
+	
+                <div id="revbig1">
+                    <div class="photo">
+                    <p><img src="images/sveta.png" alt="" /></p>
+                    <p class="rev_fio">Наталья</p>
+                    </div>
+                    <p class="rev_txt">"В возрасте 46 лет я пришла заниматься каратэ.
+                    Это было и чудом и авантюрой одновременно. Я просто вцепилась в эту возможность 
+                    даже не отдавая себе отчета зачем. Спустя 5 лет поняла - я просто захотела жить. 
+                    Оказывается я задыхалась, хотя, конечно же, дышала. Задыхалась от собственной 
+                    агрессии, неуверенности, какой-то безысходности.
+                    Прежде всего мы учились правильно дышать, двигаться в стойках, укрепляли ноги и 
+                    тем самым укрепляли свой дух. Учились видеть цель и чувствовать свое тело, контролировать 
+                    и владеть собой.
+                    Я научилась отжиматься, растяжка в мои 56 лет стала лучше, чем в 46. Появилась 
+                    внутренняя сила, уважение к себе.
+                    Конечно, были насмешки и собственные сомнения и сложности, которые дарила мне 
+                    жизнь. И занятия каратэ были моим спасением, давали мне энергию, прибавляли мне 
+                    уверенности, а главное уважение к себе. Каратэ - это путь, интересный, даже 
+                    захватывающий путь, путь к самому себе. И начать его никогда не поздно. Этот путь 
+                    никогда не кончается и это здорово!" Наталья (2 дан)</p>
+                </div>
+                		<a class="close-reveal-modal">&#215;</a>
+		</div>
+                  <a href="#" data-reveal-id="myModal2">
+                <div id="revmini2">
+                    <p><img src="images/alex2.png" alt="" /></p>
+                    <p class="rev_fio">Александр</p>
+                    <p class="rev_txt">В школу каратэ я пришел по рекомендации своего наставника. И через 
+                    какое-то время понял...</p>
+                      </div></a>
+                	<div id="myModal2" class="reveal-modal">
+                <div id="revbig2">
+                    <div class="photo">
+                    <p><img src="images/alex2.png" alt="" /></p>
+                    <p class="rev_fio">Александр</p>
+                    </div>
+                    <p class="rev_txt">В школу каратэ я пришел по рекомендации своего наставника. И через 
+                    какое-то время понял, что здесь не только учат вести бой, но ставят в первую очередь 
+                    голову. А именно: осознанности в действиях, спокойствию, терпению, преодолению себя, 
+                    усердию и уважению к окружающим. Это преподается на тренировках наравне с умением управлять 
+                    своим телом. И это те ценности и навыки, которые помогают мне в жизни, в семье и на работе. 
+                    Очень рад, что боевое искусство Кекусин вошло прочно в мою жизнь." Александр </p>
+                        </div>
+                          
+                          <a class="close-reveal-modal">&#215;</a>
+                          </div>
+                           <a href="#" data-reveal-id="myModal3">
+                <div id="revmini3">
+                    <p><img src="images/ilya.png" alt="" /></p>
+                    <p class="rev_fio">Илья</p>
+                    <p class="rev_txt">Поездив по миру, могу с уверенностью сказать, что то каратэ, 
+                    которое преподается в вашей Школе не имеет...</p>
+                               </div></a>
+                	<div id="myModal3" class="reveal-modal">
+                <div id="revbig3">
+                    <div class="photo">
+                    <p><img src="images/ilya.png" alt="" /></p>
+                    <p class="rev_fio">Илья</p>
+                    </div>
+                    <p class="rev_txt">Поездив по миру, могу с уверенностью сказать, что то каратэ, 
+                    которое преподается в вашей Школе не имеет аналогов по техничности, духу и душе. 
+                    Я узнал Кекушинкай с новой стороны, не просто как спорт, а как Путь, я думал, что 
+                    вне Японии в наши дни уже никого не интересует Путь, а оказалось, что интересует и 
+                    еще как. Пример Шихана возродил меня к жизни, когда я уже опустив руки, практически 
+                    опускался ко дну и появлялись совсем нехорошие мысли, но он дал мне новый толчок и 
+                    новое ощущение себя. Илья. </p>
+                        </div>
+                          <a class="close-reveal-modal">&#215;</a>
+                          </div>
+                           <a href="#" data-reveal-id="myModal4">
+                <div id="revmini4">
+                    <p><img src="images/natali.png" alt="" /></p>
+                    <p class="rev_fio">Светлана</p>
+                    <p class="rev_txt">У многих стереотип, что каратэ не для девушек. Даже мои родители 
+                    были против, когда узнали...</p>
+                               </div></a>
+                	<div id="myModal4" class="reveal-modal">
+                <div id="revbig4">
+                    <div class="photo">
+                    <p><img src="images/natali.png" alt="" /></p>
+                    <p class="rev_fio">Светлана</p>
+                    </div>
+                    <p class="rev_txt">У многих стереотип, что каратэ не для девушек. Даже мои родители 
+                    были против, когда узнали о моем желании заниматься, боялись что могу получить травмы. 
+                    Но со временем они успокоились, увидев, что плохого в моем увлечении ничего нет, а 
+                    только польза. Я стала спокойней, терпимей, ушла раздражительность, улучшились 
+                    взаимоотношения в семье, с мужем и детьми. Я поняла не на словах, а на опыте, что 
+                    занятия действительно очищают нашу душу, после чего мы приходим домой с хорошим 
+                    настроением. А это главное. Светлана</p>
+                        </div>
+                        <a class="close-reveal-modal">&#215;</a>
+                        </div>
+            </div>
+            <p class="clear"></p>
+            <p class="rev_txt2">ХОЧЕШЬ ТАКОЙ ЖЕ РЕЗУЛЬТАТ?</p>
+            <p class="rev_txt3">ЗАПИШИСЬ ПРЯМО СЕЙЧАС!</p>
+            <form action="#" method="post" id="h_form2">
+                <input class="input" type="text" id="name2" placeholder="Введите Ваше имя" />
+                <img class="input_img1" src="images/input1.png" alt="" />
+                <input class="input" type="text" id="phone2" placeholder="Введите Ваш телефон" style="margin-left: 20px;" />
+                <img class="input_img2" src="images/input2.png" alt="" />
+                <input type="button" id="button2" value="Оставить заявку" onclick="mailsend('name2','phone2'); yaCounter25250084.reachGoal('zayavka'); return true;" />
+            </form>
+            <p class="zamok2">
+                <img src="images/zamok2.png" alt="" />
+                <span class="rev_zamok">Ваши данные не будут переданы третьим лицам</span>
+            </p>
+        </div>
+    </div>
+    <div id="price_wrap">
+        <div id="price">
+            <p class="price_txt">РАСПИСАНИЕ И СТОИМОСТЬ</p>
+            <div>
+                <div class="prices1">
+                    <p class="forchild">ДЛЯ ДЕТЕЙ</p>
+                    <p style="margin-top: -1px;"><img src="images/price1.png" alt="" /></p>
+                    <p class="prob">Пробное занятие: БЕСПЛАТНО</p>
+                    <div id="tren">
+                        <p><b>Тренировки:</b> 8 или 12 раз в месяц</p>
+                        <p class="grey_txt">1 час 15 мин.</p>
+                        <p><b>Квалификационные экзамены</b></p>
+                        <p class="grey_txt">Два раза в год</p>
+                        <p><b>Ежегодные семинары и</b><br /><b>соревнования</b></p>
+                    </div>
+                    <p class="cost">
+                        <span style="margin-left: 20px;"><b>ЦЕНА:</b></span>
+                        <span class="grey_txt">8 занятий</span>
+                        <span class="red">3 000 руб.</span>
+                    </p>
+                    <p class="cost">
+                        <span style="margin-left: 20px;"><b>ЦЕНА:</b></span>
+                        <span class="grey_txt">12 занятий</span>
+                        <span class="red">4 000 руб.</span>
+                    </p>
+                    <a href="#h_form2" style="text-decoration: none;"><p class="price_button">Оставить заявку</p></a>
+                </div>
+                <div class="prices2">
+                    <p class="forchild">ДЛЯ ВЗРОСЛЫХ</p>
+                    <p style="margin-top: -1px;"><img src="images/price2.png" alt="" /></p>
+                    <p class="prob">Пробное занятие: БЕСПЛАТНО</p>
+                    <div id="tren">
+                        <p><b>Тренировки:</b> 8 или 12 раз в месяц</p>
+                        <p class="grey_txt">1 час 30 мин.</p>
+                        <p><b>Квалификационные экзамены</b></p>
+                        <p class="grey_txt">Два раза в год</p>
+                        <p><b>Ежегодные семинары и</b><br /><b>соревнования</b></p>
+                    </div>
+                    <p class="cost">
+                        <span style="margin-left: 20px;"><b>ЦЕНА:</b></span>
+                        <span class="grey_txt">8 занятий</span>
+                        <span class="red">4 000 руб.</span>
+                    </p>
+                    <p class="cost">
+                        <span style="margin-left: 20px;"><b>ЦЕНА:</b></span>
+                        <span class="grey_txt">12 занятий</span>
+                        <span class="red">5 000 руб.</span>
+                    </p>
+                    <a href="#h_form2" style="text-decoration: none;"><p class="price_button">Оставить заявку</p></a>
+                </div>
+            </div>
+            <p class="clear"></p>
+        </div>
+    </div>
+    <div id="count_wrap">
+        <div id="count">
+            <p class="count_txt">ПРИХОДИ С ДРУГОМ <!-- <span style="border-bottom: 1px solid #fff;">15 СЕНТЯБРЯ</span> --></p>
+            <p class="count_txt2">И ПОЛУЧИ ЗАЩИТУ НА КОЛЕНИ В ПОДАРОК!</p>
+            <!-- <p class="count_txt3">Времени до конца осталось:</p>
+            <p><script type="text/javascript" src="http://timegenerator.ru/s/1ea1b79a94045830e3539b13071e47c3.js"></script></p> -->
+            <p class="left"><img src="images/left.png" alt="" /></p>
+            <p class="right"><img src="images/right.png" alt="" /></p>
+        </div>
+    </div>
+    <div id="map_wrap">
+    <div id="map1"><script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=irzYKZwpQWQ8sugo218v56BRZyizDOWI&width=100%&height=341"></script></div>
+    <div id="map2"><script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=4SrYDJ8_QYRO1cDDCctskYCaejxQTYqW&width=100%&height=341"></script></script></div>
+        <div id="map">
+            <p class="map1_txt">м. Авиамоторная,  ул. Пруд ключики, д.3<br />Досугово-спортивный центр "Радуга"</p>
+            <p class="map2_txt">м. Курская, ул. Казакова,<br />18, корпус 12</p>
+            <div id="map_form">
+                <p class="map_txt">ЗАПИШИТЕСЬ<br />НА <span class="yellow">БЕСПЛАТНОЕ</span><br />ПРОБНОЕ ЗАНЯТИЕ</p>
+                <form action="#" method="post" id="form">
+                    <p>
+                        <input style="margin-top: 10px;" class="input2" type="text" placeholder="Введите Ваше имя" id="name3" />
+                        <img class="map_icon1" src="images/map_icon1.png" alt="" />
+                    </p>
+                    <p>
+                        <input class="input2" type="text" placeholder="Введите Ваш телефон" id="phone3"/>
+                        <img class="map_icon2" src="images/map_icon2.png" alt="" />
+                    </p>
+                    <p><input type="button" id="button3" value="Оставить заявку" onclick="mailsend('name3','phone3'); yaCounter25250084.reachGoal('zayavka'); return true;"/></p>
+                </form>
+                <p class="zamok3">
+                    <img style="float: left; margin-left: 30px;" src="images/zamok3.png" alt="" />
+                    <span class="zamok3_txt">Ваши данные не будут<br />переданы третьим лицам</span>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <div id="footer_wrap">
+        <div id="footer">
+            <div id="f_logo">
+                <p><img src="images/logo.png" alt="" /></p>
+                <p>
+                    <span class="f_logo_txt1">ШКОЛА КЕКУСИНКАЙ КАРАТЭ</span><br />
+                    <span class="f_logo_txt2">для детей и взросрлых в Москве</span>
+                </p>
+            </div>
+            <p class="clear"></p>
+            <div id="f_call">
+                <p class="f_call_txt">Бесплатный звонок по Москве и области</p>
+                <p class="f_call_number">8 (499) 403-15-97</p>
+                <a href="#h_form2" style="text-decoration: none;"><p class="f_call_button">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</p></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
