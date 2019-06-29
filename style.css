@@ -53,7 +53,7 @@
 .op4 {width: 156px; height: 179px; background: url(images/op_img.png) no-repeat;}
 #opisanie p {float: left; margin-right: 20px; text-align: center; font: 13pt Arial; color: #ff0000; padding-top: 50px;}
 
-#itis_wrap {width: 100%; min-width: 1000px; background: url(images/itis.png) no-repeat; background-size: 100% 100%;}
+#itis_wrap {width: 100%; min-width: 1000px; background: url(images/itis.png) no-repeat; background-size: 100% 100%; padding-top: 25px;}
 #itis {width: 1000px; height: 375px; margin: 0 auto;}
 .itis_txt {font: bold 20pt Arial; color: #000; border-bottom: 1px solid #000; display: inline-block; margin: 10px 0 20px 260px;}
 .itis_txt2 {font: 12pt Arial; color: #000; margin-left: 500px;}
