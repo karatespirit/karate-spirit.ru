@@ -5,8 +5,8 @@
 		$name = $_GET['name'];
 		$phone = $_GET['phone'];
 		
-		$to = "denislukashevich@gmail.com";//Почта на которую придут данные
-		$from = "denislukashevich@gmail.com";//Почта от которой придут данные
+		$to = "example@gmail.com";//Почта на которую придут данные
+		$from = "example@gmail.com";//Почта от которой придут данные
 		$subject = "Заказ";//Тема письма
 		$subject = "=?utf-8?B?".base64_encode($subject)."?=";
 		$message = "Имя: $name\nТелефон: $phone\n".$_SESSION['model'];//Тело письма
