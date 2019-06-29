@@ -1,4 +1,5 @@
 initFormSend();
+initPhoneMasks();
 
 function initFormSend() {
     $('form').submit(function(e) {
@@ -25,7 +26,14 @@ function initFormSend() {
                 }
             }
         });
+    });
+}
 
-
+function initPhoneMasks() {
+    var inputs = document.querySelectorAll('input[type="tel"]');
+    inputs.forEach(function (input) {
+        var phoneMask = IMask(input, {
+                mask: '+{7}(000)000-00-00'
+            });
     });
 }
