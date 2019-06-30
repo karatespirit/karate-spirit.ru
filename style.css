@@ -159,6 +159,7 @@
 .grey_txt {color: #7f7f7f; text-align: right; margin-right: 20px;}
 .red {font: 14pt Arial; color: #ff0000;}
 .cost {
+    display: none;
     font: 12pt Arial;
     padding: 10px 0;
     background-color: #fff;
