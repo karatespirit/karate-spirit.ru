@@ -79,8 +79,8 @@
 .itis_img imf {display: block;}
 
 #result_wrap {width: 100%; min-width: 1000px; background-color: #fff;}
-#result {width: 1000px; margin: 0 auto; padding-bottom: 50px;}
-.result_txt {font: bold 20pt Arial; color: #000; border-bottom: 1px solid #000; display: inline-block; margin: 20px 0 20px 150px;}
+#result {width: 1000px; margin: 0 auto; padding-bottom: 50px; text-align: center;}
+.result_txt {font: bold 20pt Arial; color: #000; border-bottom: 1px solid #000; display: inline-block; margin: 20px 0;}
 .result_button { 
     font: 16pt Arial; 
     color: #fff; 
@@ -89,7 +89,7 @@
     box-shadow: 2px 2px 2px #000;
     display: inline-block;
     border-radius: 5px;
-    margin: 50px 0 0 410px;
+    margin: 50px 0 0;
     background-color: #0db6d5;
     background: -webkit-linear-gradient(#0db6d5,#0087a5);
     background: -moz-linear-gradient(#0db6d5,#0087a5);
@@ -98,10 +98,32 @@
     background: linear-gradient(#0db6d5,#0087a5);
 }
 .result_button:hover {background: #0db6d5;}
-#results div {float: left; font: 12pt Arial; color: #000; text-align: center;}
+.results {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.results div {
+    float: left;
+    max-width: 210px;
+    margin: 40px 20px 0;
+    font: 12pt Arial;
+    color: #000;
+    text-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+}
 
 #result2_wrap {width: 100%; min-width: 1000px; background-color: #eeeeee;}
-#result2 {width: 1000px; margin: 0 auto; padding-bottom: 50px;}
+#result2 {width: 1000px; margin: 0 auto; padding-bottom: 50px; text-align: center;}
 .result2_txt {font: bold 20pt Arial; color: #000; border-bottom: 1px solid #000; display: inline-block; margin: 20px 0 20px 200px;}
 .result2_button { 
     font: 16pt Arial; 
@@ -111,7 +133,7 @@
     box-shadow: 2px 2px 2px #000;
     display: inline-block;
     border-radius: 5px;
-    margin: 50px 0 0 410px;
+    margin: 50px 0 0;
     background-color: #ff0000;
     background: -webkit-linear-gradient(#ff0000,#c20000);
     background: -moz-linear-gradient(#ff0000,#c20000);
