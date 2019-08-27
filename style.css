@@ -9,7 +9,7 @@
 .logo_txt2 {color: #fff; font: 12pt Arial; text-shadow: 2px 2px 1px #000; margin-left: 20px;}
 #call {position: absolute; right: 0; top: 40px;}
 .call_txt {color: #fff; font: 10pt Arial; text-align: right;}
-.call_number {color: #fff; font: 23pt Arial; text-align: right;}
+.call_number {color: #fff; font: 23pt Arial; text-align: right; text-decoration: none;}
 .call_button {color: #fff; font: 14pt Arial; border-bottom: 1px solid #fff; text-align: right; cursor: pointer;}
 .h_txt1 {color: #fff; font: bold 14pt Arial; margin-top: 150px;}
 .h_txt2 {color: #fff; font: bold 14pt Arial; margin-top: 20px;}
@@ -270,7 +270,7 @@
 .f_logo_txt2 {color: #000; font: 12pt Arial; margin-left: 20px;}
 #f_call {position: absolute; right: 0; top: 10px;}
 .f_call_txt {color: #000; font: 10pt Arial; text-align: right;}
-.f_call_number {color: #000; font: 23pt Arial; text-align: right;}
+.f_call_number {color: #000; font: 23pt Arial; text-align: right; text-decoration: none;}
 .f_call_button {color: #000; font: bold 14pt Arial; border-bottom: 1px solid #000; text-align: right; cursor: pointer;}
 .result {padding: 15px;}
 .dark-form .result {color: #fff;}
