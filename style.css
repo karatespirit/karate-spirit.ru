@@ -230,7 +230,11 @@
 .left {position: absolute; left: 150px; top: 40px;}
 .right {position: absolute; right: 150px; top: 40px;}
 
-#map_wrap {width: 100%; min-width: 1000px; height: 341px; margin-top: -10px; position: relative; z-index: 9;}
+.big-map {
+    position: relative;
+    margin: -10px 0 40px;
+}
+#map_wrap {width: 100%; min-width: 1000px; height: 341px; position: relative; z-index: 9;}
 /*#map {width: 1000px; height: 341px; margin: 0 auto;}*/
 #map_form {width: 260px; height: 300px; background-color: rgba(0,0,0,0.7); border-radius: 10px; position: absolute; top: 20px; right: 130px;}
 .map_txt {color: #fff; text-align: center; font: 16pt Arial; margin-top: 10px;}
@@ -261,7 +265,7 @@
 .zamok3 {text-align: center; font: 10pt Arial; color: #fff; margin-top: 10px;}
 #map1, #map2 {width: 48%; height: 341px; float: left; margin-right: 2%; position: relative;}
 #map2 {margin-right: 0; margin-left: 2%;}
-.map1_txt, .map2_txt {position: absolute; bottom: 0; left: 0; z-index: 1; background-color: rgba(0,0,0,0.7); padding: 20px; color: #fff; font: 12pt Verdana;}
+.map1_txt, .map2_txt, .big-map_txt {position: absolute; bottom: 0; left: 0; z-index: 1; background-color: rgba(0,0,0,0.7); padding: 20px; color: #fff; font: 12pt Verdana;}
 #footer_wrap {width: 100%; min-width: 1000px; height: 100px; background-color: #fff; margin: 0 0 -20px 0;}
 #footer {width: 1000px; height: 100px; margin: 0 auto; position: relative;}
 #f_logo {padding-top: 20px;}
