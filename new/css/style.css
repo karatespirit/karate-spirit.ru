@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.eot?93993548");
+  src: url("../font/fontello.eot?93993548#iefix") format("embedded-opentype"), url("../font/fontello.woff2?93993548") format("woff2"), url("../font/fontello.woff?93993548") format("woff"), url("../font/fontello.ttf?93993548") format("truetype"), url("../font/fontello.svg?93993548#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?93993548#fontello') format('svg');
+  }
+}
+*/
+[class^=icon-]:before, [class*=" icon-"]:before {
+  font-family: "fontello", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-phone:before {
+  content: "";
+}
+
+/* '' */
+.icon-cancel-circled:before {
+  content: "";
+}
+
+/* '' */
+.icon-menu:before {
+  content: "";
+}
+
+/* '' */
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.main {
+  min-height: 596px;
+  background: url("../img/main__bg.jpg") no-repeat center center/cover;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: left;
+  font-size: 1.125em;
+}
+@supports (backdrop-filter: blur(2px)) {
+  .navigation {
+    backdrop-filter: blur(2px);
+  }
+}
+.navigation__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation__burger, .navigation__phone {
+  font-size: 1.5em;
+  cursor: pointer;
+  text-decoration: none;
+}
+.navigation__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  text-align: center;
+}
+.navigation__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.navigation__list-item {
+  display: block;
+  padding: 3px 0 3px 1px;
+}
+.navigation__list-item a {
+  text-decoration: none;
+  transition: 0.3s color ease;
+  position: relative;
+}
+.navigation__list-item a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: red;
+  transition: 0.3s transform ease, 0.3s color ease;
+  transform: scale(0);
+}
+.navigation__list-item a:hover {
+  color: red;
+}
+.navigation__list-item a:hover:after {
+  transform: scale(1);
+}
+@media (min-width: 768px) {
+  .navigation__top {
+    display: none;
+  }
+  .navigation__list {
+    display: block !important;
+    text-align: center;
+  }
+  .navigation__list-item {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+  }
+}
+
+.main {
+  padding: 3.75em 0;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo {
+  font-size: 3.3vw;
+}
+.header__right {
+  display: none;
+}
+.header__free-call {
+  display: block;
+  font-size: 0.8em;
+}
+.header__phone {
+  font-size: 1.9em;
+  text-decoration: none;
+  transition: 0.3s color ease;
+}
+.header__phone:hover {
+  color: red;
+}
+.header__callback {
+  position: relative;
+  margin-top: 3px;
+  font-size: 1.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid currentColor;
+}
+.header__callback:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: red;
+  transition: 0.3s transform ease;
+  transform: scale(0);
+}
+.header__callback:hover:after {
+  transform: scale(1);
+}
+@media (min-width: 576px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header__logo {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo__img {
+  margin-right: 1.25em;
+}
+.logo__heading {
+  text-align: center;
+  font-size: 1.35em;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px #000;
+  text-transform: uppercase;
+}
+.logo__subheading {
+  display: block;
+  font-size: 0.74em;
+  font-weight: normal;
+  text-transform: none;
+}
+
+/*# sourceMappingURL=style.css.map */
