@@ -149,7 +149,8 @@ p {
   left: 0;
   right: 0;
   padding: 8px 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 3px #333;
   text-align: left;
   font-size: 1.125em;
 }
@@ -516,6 +517,51 @@ p {
 @media (min-width: 992px) {
   .reasons__btn {
     margin-top: 50px;
+  }
+}
+
+.advantages {
+  padding: 35px 0 45px;
+  text-align: center;
+}
+.advantages__list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.advantages__list-item {
+  width: 100%;
+  min-height: 224px;
+  margin: 10px;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.advantages__list-item:hover {
+  transform: scale(1.15);
+  z-index: 1;
+}
+.advantages__list-img {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .advantages__list-item {
+    width: calc((100% / 2) - 20px);
+  }
+}
+@media (min-width: 992px) {
+  .advantages__list-item {
+    width: calc((100% / 3) - 20px);
   }
 }
 
