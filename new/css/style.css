@@ -61,6 +61,7 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -72,6 +73,16 @@ input:focus, button:focus {
   outline-color: #f00;
 }
 
+p {
+  margin-top: 0;
+  text-align: left;
+}
+
+.red {
+  background-color: #f00;
+  color: #fff;
+}
+
 .wrapper {
   overflow: hidden;
 }
@@ -80,12 +91,44 @@ input:focus, button:focus {
   display: block;
 }
 
-.main {
-  background: url("../img/main__bg.jpg") no-repeat center center/cover;
+.heading {
+  display: inline-block;
+  margin: 0;
+  border-bottom: 1px solid currentColor;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (min-width: 576px) {
+  .heading {
+    font-size: 1.625em;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.33em;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #000;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.button:hover {
+  box-shadow: none;
+}
+.button_orange {
+  background: linear-gradient(#f2b600, #ff6632);
+}
+.button_orange:hover {
+  background: linear-gradient(#f2b600, #f2b600);
 }
 
 .navigation {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   right: 0;
@@ -168,6 +211,7 @@ input:focus, button:focus {
 
 .main {
   padding: 3.75em 0;
+  background: url("../img/main__bg.jpg") no-repeat center top/cover;
   color: #fff;
 }
 .main__heading {
@@ -241,19 +285,11 @@ input:focus, button:focus {
   border: none;
   border-radius: 5px;
   color: inherit;
-  background-color: #ff0000;
-  background: -webkit-linear-gradient(#ff0000, #c20000);
-  background: -moz-linear-gradient(#ff0000, #c20000);
-  background: -o-linear-gradient(#ff0000, #c20000);
-  background: -ms-linear-gradient(#ff0000, #c20000);
+  background: linear-gradient(#ff0000, #c20000);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .main__button:hover {
-  background-color: #ff0000;
-  background: -webkit-linear-gradient(#ff0000, #ff0000);
-  background: -moz-linear-gradient(#ff0000, #ff0000);
-  background: -o-linear-gradient(#ff0000, #ff0000);
-  background: -ms-linear-gradient(#ff0000, #ff0000);
+  background: linear-gradient(#ff0000, #ff0000);
   box-shadow: none;
 }
 .main__note {
@@ -275,6 +311,10 @@ input:focus, button:focus {
   }
 }
 @media (min-width: 768px) {
+  .main {
+    background-size: cover;
+    background-attachment: fixed;
+  }
   .main__form-wrapper {
     display: inline-flex;
   }
@@ -290,6 +330,7 @@ input:focus, button:focus {
     width: 347px;
     height: 449px;
     background: url("../img/karatist1.png") no-repeat center center/contain;
+    pointer-events: none;
   }
   .main__form:after {
     content: "";
@@ -299,12 +340,18 @@ input:focus, button:focus {
     width: 211px;
     height: 426px;
     background: url("../img/karatist2.png") no-repeat center center/contain;
+    pointer-events: none;
   }
   .main__heading {
     text-align: left;
   }
   .main__subheading {
     width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    background-size: 100%;
   }
 }
 
@@ -388,6 +435,27 @@ input:focus, button:focus {
   font-size: 0.74em;
   font-weight: normal;
   text-transform: none;
+}
+
+.about {
+  padding: 35px 0 25px;
+  background-color: #ebebeb;
+  text-align: center;
+  color: #000;
+}
+.about__heading {
+  margin-bottom: 20px;
+}
+.about__img {
+  margin: 0 auto 20px;
+}
+.about__btn {
+  margin-top: 15px;
+}
+@media (min-width: 992px) {
+  .about__btn {
+    margin-top: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
