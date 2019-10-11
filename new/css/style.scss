@@ -76,6 +76,12 @@ p {
       background: linear-gradient(#0db6d5,#0db6d5);
     }
   }
+  &_red {
+    background: linear-gradient(#ff0000,#c20000);
+    &:hover {
+      background: linear-gradient(#ff0000,#ff0000);
+    }
+  }
 }
 
 .navigation {
@@ -414,6 +420,7 @@ p {
   justify-content: center;
   padding: 0;
   list-style: none;
+  text-align: center;
   &__item {
     min-width: 210px;
     max-width: 240px;
@@ -429,4 +436,26 @@ p {
 .results {
   padding: 35px 0 45px;
   text-align: center;
+  &__btn {
+    margin-top: 15px;
+  }
+  @media(min-width: 992px) {
+    &__btn {
+      margin-top: 50px;
+    }
+  }
+}
+
+.reasons {
+  padding: 35px 0 45px;
+  background-color: #eee;
+  text-align: center;
+  &__btn {
+    margin-top: 15px;
+  }
+  @media(min-width: 992px) {
+    &__btn {
+      margin-top: 50px;
+    }
+  }
 }

@@ -135,6 +135,12 @@ p {
 .button_blue:hover {
   background: linear-gradient(#0db6d5, #0db6d5);
 }
+.button_red {
+  background: linear-gradient(#ff0000, #c20000);
+}
+.button_red:hover {
+  background: linear-gradient(#ff0000, #ff0000);
+}
 
 .navigation {
   position: fixed;
@@ -473,6 +479,7 @@ p {
   justify-content: center;
   padding: 0;
   list-style: none;
+  text-align: center;
 }
 .feature-list__item {
   min-width: 210px;
@@ -488,6 +495,28 @@ p {
 .results {
   padding: 35px 0 45px;
   text-align: center;
+}
+.results__btn {
+  margin-top: 15px;
+}
+@media (min-width: 992px) {
+  .results__btn {
+    margin-top: 50px;
+  }
+}
+
+.reasons {
+  padding: 35px 0 45px;
+  background-color: #eee;
+  text-align: center;
+}
+.reasons__btn {
+  margin-top: 15px;
+}
+@media (min-width: 992px) {
+  .reasons__btn {
+    margin-top: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
