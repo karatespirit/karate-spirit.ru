@@ -68,8 +68,19 @@ a {
   color: inherit;
 }
 
+input:focus, button:focus {
+  outline-color: #f00;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.d-block {
+  display: block;
+}
+
 .main {
-  min-height: 596px;
   background: url("../img/main__bg.jpg") no-repeat center center/cover;
 }
 
@@ -158,6 +169,143 @@ a {
 .main {
   padding: 3.75em 0;
   color: #fff;
+}
+.main__heading {
+  display: block;
+  margin: 7em 0 0;
+  text-align: center;
+  font-size: 3.65vw;
+  line-height: 2.3;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px #000;
+}
+.main__subheading {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid currentColor;
+  margin: 0;
+  padding: 0.47em 0.45em;
+  text-align: center;
+  font-size: 4.3vw;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px #000;
+}
+.main__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__form {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 0;
+  padding: 16px 10px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #000;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.main__input, .main__button {
+  width: 100%;
+  margin: 5px 10px;
+}
+.main__input {
+  position: relative;
+  font-size: 0.8em;
+}
+.main__input input {
+  min-width: 214px;
+  min-height: 30px;
+  width: 100%;
+  padding: 0 2em 0 0.7em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 2px #000;
+}
+.main__input:before {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  font-size: 1.3em;
+  color: #999;
+}
+.main__button {
+  min-width: 214px;
+  margin: 5px 10px;
+  padding: 6px 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #000;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  background-color: #ff0000;
+  background: -webkit-linear-gradient(#ff0000, #c20000);
+  background: -moz-linear-gradient(#ff0000, #c20000);
+  background: -o-linear-gradient(#ff0000, #c20000);
+  background: -ms-linear-gradient(#ff0000, #c20000);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.main__button:hover {
+  background-color: #ff0000;
+  background: -webkit-linear-gradient(#ff0000, #ff0000);
+  background: -moz-linear-gradient(#ff0000, #ff0000);
+  background: -o-linear-gradient(#ff0000, #ff0000);
+  background: -ms-linear-gradient(#ff0000, #ff0000);
+  box-shadow: none;
+}
+.main__note {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.833em;
+}
+.main__note:before {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+@media (min-width: 576px) {
+  .main__heading {
+    font-size: 1.1625em;
+  }
+  .main__subheading {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+  .main__form-wrapper {
+    display: inline-flex;
+  }
+  .main__form {
+    flex-direction: row;
+    align-self: flex-start;
+  }
+  .main__form:before {
+    content: "";
+    position: absolute;
+    left: calc(100% - 120px);
+    top: -260px;
+    width: 347px;
+    height: 449px;
+    background: url("../img/karatist1.png") no-repeat center center/contain;
+  }
+  .main__form:after {
+    content: "";
+    position: absolute;
+    left: calc(100% + 90px);
+    top: -175px;
+    width: 211px;
+    height: 426px;
+    background: url("../img/karatist2.png") no-repeat center center/contain;
+  }
+  .main__heading {
+    text-align: left;
+  }
+  .main__subheading {
+    width: auto;
+  }
 }
 
 .header {

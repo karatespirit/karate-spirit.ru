@@ -14,35 +14,48 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class="navigation">
-        <div class="container">
-            <div class="navigation__top">
-                <a class="navigation__burger icon-menu" href="#menu" aria-label="Открыть меню"></a>
-                <a class="navigation__phone icon-phone" href="tel:+79778254357"></a>
+    <div class="wrapper">
+        <nav class="navigation">
+            <div class="container">
+                <div class="navigation__top">
+                    <a class="navigation__burger icon-menu" href="#menu" aria-label="Открыть меню"></a>
+                    <a class="navigation__phone icon-phone" href="tel:+79778254357"></a>
+                </div>
+                <ul id="menu" class="navigation__list">
+                    <li class="navigation__list-item"><a href="#advantages">Наши преимущества</a></li>
+                    <li class="navigation__list-item"><a href="#reviews">Отзывы</a></li>
+                    <li class="navigation__list-item"><a href="#schedule">Расписание и стоимость</a></li>
+                    <li class="navigation__list-item"><a href="#offer">Акция</a></li>
+                </ul>
             </div>
-            <ul id="menu" class="navigation__list">
-                <li class="navigation__list-item"><a href="#advantages">Наши преимущества</a></li>
-                <li class="navigation__list-item"><a href="#reviews">Отзывы</a></li>
-                <li class="navigation__list-item"><a href="#schedule">Расписание и стоимость</a></li>
-                <li class="navigation__list-item"><a href="#offer">Акция</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div id="main" class="main">
-        <div class="container">
-            <header id="header" class="header">
-                <div class="header__logo logo">
-                    <img src="img/logo.png" alt=Логотип" class="logo__img">
-                    <div>
-                        <h1 class="logo__heading">Школа Кёкусинкай каратэ <span class="logo__subheading">для детей и взрослых в Москве</span></h1>
+        </nav>
+        <div id="main" class="main">
+            <div class="container">
+                <header id="header" class="header">
+                    <div class="header__logo logo">
+                        <img src="img/logo.png" alt=Логотип" class="logo__img">
+                        <div>
+                            <h1 class="logo__heading">Школа Кёкусинкай каратэ <span class="logo__subheading">для детей и взрослых в Москве</span></h1>
+                        </div>
                     </div>
+                    <div class="header__right">
+                        <span class="header__free-call">Бесплатный звонок по Москве и области</span>
+                        <a class="header__phone" href="tel:+79778254357">+7(977) 825-43-57</a>
+                        <a class="header__callback" href="#">Заказать обратный звонок</a>
+                    </div>
+                </header>
+                <h2 class="main__heading">Как воспитать силу духа, волю, характер? <span class="d-block">Уроки боевого искусства Кёкусинкай помогут в этом!</span></h2>
+                <h3 class="main__subheading">Запишитесь на бесплатный урок!</h3>
+                <div class="main__form-wrapper">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScg2ZYYiooCXUmZXSB3b7gfaCwbA4IBwSMut2Z13T8IYWoAlg/formResponse" method="post" id="main-form" class="main__form form">
+                        <label class="main__input icon-phone"><input class="input" type="text" id="name" name="entry.374510364" placeholder="Введите Ваше имя" /></label>
+                        <label class="main__input icon-phone"><input class="input" type="tel" id="phone" name="entry.1371898961" placeholder="Введите Ваш телефон" /></label>
+                        <input type="hidden" hidden name="entry.769897608" value="первая форма"/>
+                        <button class="main__button" type="submit" onclick="yaCounter25250084.reachGoal('zayavka'); return true;">Оставить заявку</button>
+                    </form>
+                    <div class="main__note icon-phone">Ваши данные не будут переданы третьим лицам</div>
                 </div>
-                <div class="header__right">
-                    <span class="header__free-call">Бесплатный звонок по Москве и области</span>
-                    <a class="header__phone" href="tel:+79778254357">+7(977) 825-43-57</a>
-                    <a class="header__callback" href="#">Заказать обратный звонок</a>
-                </div>
-            </header>
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
