@@ -726,6 +726,11 @@ p {
         max-width: 220px;
       }
     }
+    .slick-track {
+      display: flex;
+      justify-content: center;
+      width: auto !important;
+    }
     .slick-list {
       overflow: visible;
     }
