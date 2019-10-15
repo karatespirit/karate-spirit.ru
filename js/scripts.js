@@ -3,6 +3,7 @@ initBurgerClick();
 initMapPicking();
 initFormSend();
 initPhoneMasks();
+initScrollTo();
 
 function initFormSend() {
     $('form').submit(function(e) {
@@ -78,6 +79,14 @@ function initMapPicking() {
         $prevActiveTab.toggleClass('maps__tab_active');
         $(this).toggleClass('maps__tab_active');
     })
+}
+
+function initScrollTo() {
+    $(".scrollTo").on('click', function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $($(this).attr('href')).offset().top - 20
+        }, 1000);
+    });
 }
 
 function initSlider(slider, options) {
