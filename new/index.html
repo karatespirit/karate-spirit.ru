@@ -323,6 +323,52 @@
                 </h1>
             </div>
         </section>
+        <section id="maps" class="maps">
+            <div class="container">
+                <ul class="maps__tabs">
+                    <li data-map="https://yandex.ru/map-widget/v1/-/CGwdE8-W" class="maps__tab maps__tab_active icon-metro icon-metro_circle">
+                        <span class="maps__tab-text">Белорусская</span>
+                        <div class="maps__tab-address" hidden>
+                            м. Белорусская,  ул. Большая грузинская, д.56
+                            <span class="d-block">Центр детского творчества "Ворзрождение"</span>
+                        </div>
+                    </li>
+                    <li data-map="https://yandex.ru/map-widget/v1/-/CGwdU6zT" class="maps__tab icon-metro icon-metro_sun">
+                        <span class="maps__tab-text">Авиамоторная</span>
+                        <div class="maps__tab-address" hidden>
+                            м. Авиамоторная,  ул. Пруд ключики, д.3
+                            <span class="d-block">Досугово-спортивный центр "Радуга"</span>
+                        </div>
+                    </li>
+                    <li data-map="https://yandex.ru/map-widget/v1/-/CGwdUFPM" class="maps__tab icon-metro icon-metro_arbat">
+                        <span class="maps__tab-text">Славянский бульвар</span>
+                        <div class="maps__tab-address" hidden>
+                            м. Славянский бульвар,
+                            <span class="d-block">ул. Кастанаевская дом 39</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="maps__map-wrapper">
+                <iframe id="map" class="maps__map" src="https://yandex.ru/map-widget/v1/-/CGwdE8-W"  allowfullscreen></iframe>
+                <div class="maps__address">
+                    м. Белорусская,  ул. Большая грузинская, д.56
+                    <span class="d-block">Центр детского творчества "Ворзрождение"</span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form maps__form">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScg2ZYYiooCXUmZXSB3b7gfaCwbA4IBwSMut2Z13T8IYWoAlg/formResponse" method="post" id="maps-form" class="maps__form-inner form__inner">
+                        <h2 class="form__heading">Запишитесь на <span class="form__heading-highlight">бесплатное</span> пробное занятие</h2>
+                        <label class="form__input icon-user"><input class="input" type="text" name="entry.374510364" placeholder="Введите Ваше имя" /></label>
+                        <label class="form__input icon-mobile"><input class="input" type="tel" name="entry.1371898961" placeholder="Введите Ваш телефон" /></label>
+                        <input type="hidden" hidden name="entry.769897608" value="последняя форма"/>
+                        <button class="form__button" type="submit" onclick="yaCounter25250084.reachGoal('zayavka'); return true;">Оставить заявку</button>
+                    </form>
+                    <div class="form__note icon-lock"><span>Ваши данные не будут переданы третьим лицам</span></div>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>

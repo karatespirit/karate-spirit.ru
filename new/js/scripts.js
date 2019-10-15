@@ -1,5 +1,6 @@
 prepareModals();
 initBurgerClick();
+initMapPicking();
 
 function initBurgerClick () {
     $('.navigation__burger').on('click', function () {
@@ -25,6 +26,19 @@ function prepareModals() {
         $(this).attr('href', '#'+id);
         $body.append('<div class="modal-review" id="'+id+'" hidden>'+left+right+'</div>')
     });
+}
+
+function initMapPicking() {
+    $('.maps__tab').on('click', function (e) {
+        e.preventDefault();
+
+        $('#map').attr('src', $(this).attr('data-map'));
+        $('.maps__address').html($(this).find('.maps__tab-address').html());
+
+        const $prevActiveTab = $('.maps__tab_active');
+        $prevActiveTab.toggleClass('maps__tab_active');
+        $(this).toggleClass('maps__tab_active');
+    })
 }
 
 function initSlider(slider, options) {
