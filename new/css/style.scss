@@ -281,6 +281,9 @@ p {
     text-transform: uppercase;
     text-shadow: 1px 1px 3px #000;
   }
+  .form__result {
+    color: #000;
+  }
 
   @media (min-width: 576px) {
     &__heading {
@@ -405,6 +408,9 @@ p {
       color: #fed402;
       border-bottom: 1px solid #fed402;
     }
+  }
+  &__result {
+    color: #fff;
   }
   @media (min-width: 768px) {
     display: inline-flex;
