@@ -421,7 +421,7 @@ p {
   }
 }
 
-.header {
+.contacts {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1039,6 +1039,18 @@ p {
       position: absolute;
       top: 100px;
       right: 60px;
+    }
+  }
+}
+
+.footer {
+  padding: 20px 0;
+  .logo__heading {
+    text-shadow: none;
+  }
+  @media (max-width: 767px) {
+    &__contacts {
+      justify-content: center;
     }
   }
 }
